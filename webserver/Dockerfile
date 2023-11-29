@@ -5,8 +5,8 @@ RUN apk -U upgrade
 RUN apk add --no-cache rsync nodejs npm gcc freetype-dev libjpeg-turbo-dev libpng-dev libzip-dev $PHPIZE_DEPS openssl-dev
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
-RUN docker-php-ext-install opcache gd pdo_mysql zip
-RUN docker-php-ext-enable opcache gd zip
+RUN docker-php-ext-install opcache gd pdo_mysql zip mysqli intl exif
+RUN docker-php-ext-enable opcache gd zip mysqli intl exif
 RUN wget https://getcomposer.org/download/latest-stable/composer.phar
 RUN chmod a+x composer.phar
 RUN mv composer.phar /usr/local/bin/composer
