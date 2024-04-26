@@ -1,14 +1,17 @@
 <?php
 
+namespace Ots\Base;
+
 class Database {
 
     public function __construct() {      
     
-        $this->dbhost = 'database'; //https://probable-succotash-5vrw4555495hpxvw-3306.app.github.dev/';
-        $this->dbport = 3306;
-        $this->dbname = 'Verwaltung';
-        $this->dbUser = 'root';
-        $this->dbPassword = 'schlucht';
+        $this->dbhost = DBHOST;
+        $this->dbport = DBPORT;
+        $this->dbname = DBNAME;
+        $this->dbUser = DBUSER;
+        $this->dbPassword = DBPWD;
+        
     }
 
     public function connect() {

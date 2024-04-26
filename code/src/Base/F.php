@@ -1,6 +1,9 @@
 <?php
 
-function dd($msg, $die = true) {
+namespace Ots\Base;
+
+class F {
+static function dd($msg, $die = true) {
     echo '<pre>';
     var_dump($msg);
     echo '</pre>';
@@ -8,4 +11,5 @@ function dd($msg, $die = true) {
     if ($die) {
         die();
     }
+}
 }
