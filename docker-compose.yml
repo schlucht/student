@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
     apache:
@@ -25,7 +25,7 @@ services:
         image: mariadb:${MARIADB_VERSION:-latest}
         ports:
             - ${DB_PUBLIC_PORT:-3306}:3306
-        environment:
+        environment:            
             - MARIADB_ROOT_PASSWORD=schlucht
         volumes:
             - db:/var/lib/mysql

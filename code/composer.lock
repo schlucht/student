@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e593faa4691e780f02abe6f37a864c64",
+    "content-hash": "eef7839f287e3a4e8e37e4f894ff1596",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -177,6 +177,58 @@
                 "source": "https://github.com/paragonie/easydb"
             },
             "time": "2022-06-08T05:23:05+00:00"
+        },
+        {
+            "name": "siriusphp/validation",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/siriusphp/validation.git",
+                "reference": "4704128b2b8e6fc781025e1594b337202478a197"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/siriusphp/validation/zipball/4704128b2b8e6fc781025e1594b337202478a197",
+                "reference": "4704128b2b8e6fc781025e1594b337202478a197",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "pestphp/pest": "*",
+                "pestphp/pest-plugin-drift": "^2.5",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sirius\\Validation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adrian Miu",
+                    "email": "adrian@adrianmiu.ro"
+                }
+            ],
+            "description": "Data validation library. Validate arrays, array objects, domain models etc using a simple API. Easily add your own validators on top of the already dozens built-in validation rules",
+            "keywords": [
+                "form",
+                "modeling",
+                "sanitization",
+                "security",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/siriusphp/validation/issues",
+                "source": "https://github.com/siriusphp/validation/tree/4.0.0"
+            },
+            "time": "2023-11-19T15:40:43+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",

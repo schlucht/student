@@ -2,6 +2,7 @@
     "require": {
         "twig/twig": "^3.9",
         "altorouter/altorouter": "^2.0",
-        "paragonie/easydb": "^3.0"
+        "paragonie/easydb": "^3.0",
+        "siriusphp/validation": "^4.0"
     }
 }
