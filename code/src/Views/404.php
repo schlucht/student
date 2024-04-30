@@ -1,5 +1,5 @@
-<?php include 'Header.php' ?>
+<?php include 'Layouts/Header.php' ?>
     <section class="fourNullFour">
         <p><span>404</span>Seite nicht gefunden!</p>
     </section>
-<?php include 'Footer.php' ?>
+<?php include 'Layouts/Footer.php' ?>

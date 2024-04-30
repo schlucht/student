@@ -8,8 +8,21 @@
 </head>
 <body>
    <header>
+        <div class="logo">
+            <img src="https://jagolo.ch/assets/logo/jago-logo-light.svg" alt="logo" height="70"/>
+        </div>
         <nav>
-            <a href="/" >Startseite</a>            
+            <div class="nav-left">
+                <a href="/" >Startseite</a> 
+            </div>
+            <div class="nav-right">
+                <a href="/">Login</a>
+                <a href="/">Anmelden</a>
+                <div class="user">
+                    <a href="/">User</a>
+                    <a href="/">Logout</a>
+                </div>
+            </div>
         </nav>  
     </header>
     

@@ -4,7 +4,7 @@ namespace Ots\Controllers;
 
 use Ots\Base\Database;
 use Ots\Base\Controller;
-
+use Ots\Base\F;
 class LagerController extends Controller
 {
 
@@ -21,11 +21,14 @@ class LagerController extends Controller
         $db = $database->connect();
 
         $lager = $db->run('SELECT * from LGR_Lager');    
+        
         $data = array (
-            'title' => 'Lagerverwaltung',
+            'title' => 'Lagerverwaltung und Morgen',
             'lager' => $lager
         );
+
         
-        $this->render('Lager');
+
+        $this->render('Lager', $data);
     }
 }
