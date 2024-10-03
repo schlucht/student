@@ -1,8 +1,0 @@
-header {
-    background-color: gold;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 1rem;
-}
