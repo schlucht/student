@@ -2,7 +2,7 @@ services:
     apache:
         image: httpd:alpine
         ports:
-            - 80:80
+            - 8888:80
             - 443:443
         volumes:
             - ./code:/var/www/html
@@ -20,18 +20,28 @@ services:
             - ./webserver/php-ini-overrides.ini:/usr/local/etc/php/conf.d/extra.ini
             - ./data/logs:/var/log
     database:
-        image: mariadb:${MARIADB_VERSION:-latest}
+        image: mariadb:latest        
         ports:
-            - ${DB_PUBLIC_PORT:-3306}:3306
+            - 3306:3306
         environment:            
-            - MARIADB_ROOT_PASSWORD=schlucht            
+            MARIADB_ROOT_PASSWORD: schlucht 
+            MARIADB_USER: root  
         volumes:
             - db:/var/lib/mysql
-    adm:
-        image: adminer
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: pma
+        links:
+            - database
+        environment:
+            PMA_USER: root
+            PMA_PASSWORD: schlucht
+            PMA_HOST: database
+            PMA_PORT: 3306
+            PMA_ARBITRARY: 1
         restart: always
         ports:
-            - 8080:8080
+            - 8081:80
 volumes:
     db:
 networks:

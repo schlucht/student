@@ -1,1 +1,24 @@
-<p>create works!</p>
+<form [formGroup] = "createUser" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="firstname">Vorname</label>
+        <input name="firstname" id="firstname" type="text" formControlName="firstname">
+    </div>
+    <div>
+        <label for="lastname">Nachname</label>
+        <input name="lastname" id="lastname" type="text" formControlName="lastname">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input name="email" id="email" type="email" formControlName="email">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input name="password" id="password" type="password" formControlName="password">
+    </div>
+    <div>
+        <button type="submit">Speichern</button>
+    </div>
+    <pre>
+        {{ result | json }}
+    </pre>
+</form>

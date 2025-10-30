@@ -1,11 +1,13 @@
 import { Component, inject, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { User } from './services/user';
 import { Users } from './user/users/users';
+import { Header } from './components/header/header';
+import { Footer } from './components/footer';
 
 @Component({
   selector: 'ots-root',
-  imports: [RouterOutlet, Users],
+  imports: [RouterOutlet, Header, Footer, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
