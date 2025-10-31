@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'ots-footer',
   imports: [DatePipe],
-  template: `<footer class="h-40 flex justify-center items-center bg-amber-900 text-gray-300">
+  template: `<footer class="min-h-full flex justify-center items-center bg-amber-900 text-gray-300">
       &copy;OTS - {{date | date}}
       </footer>`,  
 })

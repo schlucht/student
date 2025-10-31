@@ -1,0 +1,15 @@
+<div class=" bg-red-200 flex-col w-[80%] m-auto">    
+    <table>
+        @for(usr of users; track usr.userid){
+            <tr>                
+                <td>{{usr.firstname}}</td>
+                <td>{{usr.lastname}}</td>
+                <td>{{usr.email}}</td>
+                <td>
+                    <button class="bg-red-500">Delete</button>
+                    <button class="bg-green-500">Update</button>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

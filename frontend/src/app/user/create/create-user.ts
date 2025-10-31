@@ -2,20 +2,20 @@ import { JsonPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
-import { User } from '../../services/user';
+import { UserService } from '../../services/user.service';
 import { IUser } from '../../models/user.model';
 
 
 @Component({
-  selector: 'ots-create',
+  selector: 'ots-create-user',
   imports: [ReactiveFormsModule, JsonPipe],
-  templateUrl: './create.html',
-  styleUrl: './create.css',
+  templateUrl: './create-user.html',
+  styleUrl: './create-user.css',
 })
-export class Create {
+export class CreateUser {
   createUser: FormGroup;
   result?: any;
-  userApi = inject(User);
+  userApi = inject(UserService);
   
   constructor(private fb: FormBuilder) {
     this.createUser = this.fb.group({

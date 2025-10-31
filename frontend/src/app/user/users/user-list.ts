@@ -1,19 +1,18 @@
 import { Component, inject } from '@angular/core';
-import { User } from '../../services/user';
+import { UserService } from '../../services/user.service';
 import { IUser } from '../../models/user.model';
 import { IApi } from '../../models/api.model';
+import { RouterLink, RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: 'ots-users',
+  selector: 'ots-user-list',
   imports: [],
-  templateUrl: './users.html',
-  styleUrl: './users.css',
+  templateUrl: './user-list.html',
+  styleUrl: './user-list.css',
 })
-export class Users {
-  usersApi = inject(User);
+export class UserList {
+  usersApi = inject(UserService);
   users: IUser[] = [];
-  
- 
   
   constructor() {
     this.usersApi.read().subscribe({

@@ -1,16 +1,15 @@
 import { Component, inject, signal } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { User } from './services/user';
-import { Users } from './user/users/users';
+import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer';
+import { Layout } from "./layouts/layout/layout";
 
 @Component({
   selector: 'ots-root',
-  imports: [RouterOutlet, Header, Footer, RouterLink],
+  imports: [Layout],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('frontend');
+  
 }
